@@ -1,7 +1,11 @@
 
 const Hero = () => {
   return (
-    <div>Hero</div>
+    <>
+    <section>
+      <img s
+    </section>
+    </>
   )
 }
 
