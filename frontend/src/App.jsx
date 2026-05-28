@@ -1,27 +1,30 @@
-import { BrowserRouter ,Route,Routes } from "react-router-dom"
-import './App.css'
-import UserLayout from "./components/layout/UserLayout"
-import Home from "./pages/Home"
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+
+import UserLayout from "./components/layout/UserLayout";
+import Home from "./pages/Home";
 
 function App() {
-
   return (
-    <>
     <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<UserLayout/>}>
-      <Route index element ={<Home/>}/>
-      { /*User Layout*/}
-      
-      </Route>
-      <Route>
-      { /*Client Layout*/}
-      </Route>
-    </Routes>
+      <Routes>
+
+        {/* User Layout */}
+        <Route path="/" element={<UserLayout />}>
+          <Route index element={<Home />} />
+        </Route>
+
+        {/* Client Layout */}
+        {/* Example */}
+        {/* 
+        <Route path="/client" element={<ClientLayout />}>
+          <Route index element={<Dashboard />} />
+        </Route> 
+        */}
+
+      </Routes>
     </BrowserRouter>
-    
-        </>
-  )
+  );
 }
 
-export default App
+export default App;
